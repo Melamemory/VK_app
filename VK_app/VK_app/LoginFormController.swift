@@ -14,18 +14,32 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBAction func signinPressed(_ sender: UIButton) {
-        guard let login = loginTextField.text,
-            let password = passwordTextField.text else { return }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let checkResult = checkUserData()
         
-        if login == "admin" && password == "123456" {
-            print("успешная авторизация")
-        } else {
-            print("неуспешная авторизация")
+        if !checkResult {
+            showLoginError()
         }
-
+        
+        return checkResult
     }
     
+    func checkUserData() -> Bool {
+        guard let login = loginTextField.text, let password = passwordTextField.text else { return false }
+        
+        if login == "admin" && password == "123456" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showLoginError() {
+        let alter = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alter.addAction(action)
+        present(alter, animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
