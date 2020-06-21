@@ -174,7 +174,7 @@
                                 <connections>
                                     <outlet property="avatarImage" destination="cwm-Cl-O0b" id="s03-kY-bsb"/>
                                     <outlet property="friendsLabel" destination="d2S-Bm-rs0" id="4Bf-5O-wJT"/>
-                                    <segue destination="POl-z2-kW6" kind="show" id="6Bc-8Z-OmV"/>
+                                    <segue destination="POl-z2-kW6" kind="show" identifier="usersPhotos" id="Syn-W6-zUA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

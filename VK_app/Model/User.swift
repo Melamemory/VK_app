@@ -11,12 +11,12 @@ import UIKit
 class User: NSObject {
     let userName: String
     let avatar: UIImage?
-    let photoes: [UIImage?]
+    let photos: [UIImage?]
     
     init(name: String) {
         self.userName = name
         self.avatar = UIImage(systemName: "person.fill")
-        self.photoes = [
+        self.photos = [
             UIImage(systemName: "person.fill"),
             UIImage(systemName: "photo"),
             UIImage(systemName: "person.3.fill")

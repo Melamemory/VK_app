@@ -11,6 +11,17 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class PhotoController: UICollectionViewController {
+    
+//    var photos = [UIImage?] ()
+//
+//    @IBAction func showPhotos (segue: UIStoryboardSegue) {
+//        if segue.identifier == "usersPhotos" {
+//            guard let friendsController = segue.source as? FriendsController else { return }
+//            if let indexPath = friendsController.tableView.indexPathForSelectedRow {
+//                photos = friendsController.friends[indexPath.row].photos
+//            }
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +50,13 @@ class PhotoController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 5
+        return 5 //photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         
-//        cell.photoImage.image
+//        cell.photoImage.image = photos[indexPath.row]
     
         // Configure the cell
     
