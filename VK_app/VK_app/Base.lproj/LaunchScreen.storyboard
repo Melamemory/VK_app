@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK app" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx8-zA-oZD">
-                                <rect key="frame" x="165" y="244" width="84" height="30"/>
+                                <rect key="frame" x="165" y="144" width="84" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -25,7 +25,7 @@
                         <color key="backgroundColor" red="0.6657673717" green="0.81716102359999998" blue="0.88694232699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wx8-zA-oZD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NXF-vp-FPm"/>
-                            <constraint firstItem="Wx8-zA-oZD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Sov-tf-zGp"/>
+                            <constraint firstItem="Wx8-zA-oZD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Sov-tf-zGp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
