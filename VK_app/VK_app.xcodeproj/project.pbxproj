@@ -22,6 +22,8 @@
 		09B45C912496C0EE001D1CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B45C902496C0EE001D1CC1 /* Assets.xcassets */; };
 		09B45C942496C0EE001D1CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B45C922496C0EE001D1CC1 /* LaunchScreen.storyboard */; };
 		09B45C9C2496D442001D1CC1 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B45C9B2496D442001D1CC1 /* LoginFormController.swift */; };
+		09B8A3E324A3923100F7E4BD /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B8A3E224A3923100F7E4BD /* AvatarView.swift */; };
+		09B8A3E524A4027600F7E4BD /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B8A3E424A4027600F7E4BD /* LikeControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		09B45C932496C0EE001D1CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09B45C952496C0EE001D1CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09B45C9B2496D442001D1CC1 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		09B8A3E224A3923100F7E4BD /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		09B8A3E424A4027600F7E4BD /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		09B45C862496C0EB001D1CC1 /* VK_app */ = {
 			isa = PBXGroup;
 			children = (
+				09B8A3E624A413F600F7E4BD /* CustomView */,
 				0949EC71249F725F00DFC160 /* Photo */,
 				0949EC6C249F6F4C00DFC160 /* Friends */,
 				0949EC67249F69E000DFC160 /* MyGroups */,
@@ -132,6 +137,15 @@
 				09B45C952496C0EE001D1CC1 /* Info.plist */,
 			);
 			path = VK_app;
+			sourceTree = "<group>";
+		};
+		09B8A3E624A413F600F7E4BD /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				09B8A3E224A3923100F7E4BD /* AvatarView.swift */,
+				09B8A3E424A4027600F7E4BD /* LikeControl.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +221,7 @@
 			files = (
 				0949EC64249EA3A000DFC160 /* AllGroupsController.swift in Sources */,
 				0949EC70249F6F8C00DFC160 /* FriendsController.swift in Sources */,
+				09B8A3E524A4027600F7E4BD /* LikeControl.swift in Sources */,
 				09B45C9C2496D442001D1CC1 /* LoginFormController.swift in Sources */,
 				0949EC7A249F762F00DFC160 /* Group.swift in Sources */,
 				0949EC73249F729200DFC160 /* PhotoController.swift in Sources */,
@@ -215,6 +230,7 @@
 				0949EC75249F72A700DFC160 /* PhotoCell.swift in Sources */,
 				0949EC66249EA3C500DFC160 /* AllGroupsCell.swift in Sources */,
 				0949EC6B249F6A4B00DFC160 /* MyGroupsCell.swift in Sources */,
+				09B8A3E324A3923100F7E4BD /* AvatarView.swift in Sources */,
 				0949EC6E249F6F7600DFC160 /* FriendsCell.swift in Sources */,
 				0949EC78249F760400DFC160 /* User.swift in Sources */,
 			);

@@ -149,30 +149,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cwm-Cl-O0b">
-                                            <rect key="frame" x="6" y="8.6666666666666643" width="84" height="83"/>
-                                            <color key="tintColor" red="0.2098816335" green="0.32468634839999999" blue="0.41983065009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2S-Bm-rs0">
                                             <rect key="frame" x="100" y="33" width="48" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-6T-s53" customClass="AvatarView" customModule="VK_app" customModuleProvider="target">
+                                            <rect key="frame" x="6" y="10" width="80" height="80"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="9mK-5H-fF7"/>
+                                                <constraint firstAttribute="height" constant="80" id="vXj-dR-ho3"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="5" height="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.98298639060000004" green="0.96271818880000004" blue="0.90769690280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="cwm-Cl-O0b" firstAttribute="top" secondItem="tgY-Mq-PfU" secondAttribute="topMargin" constant="-2.5" id="AWP-zc-XDv"/>
-                                        <constraint firstItem="d2S-Bm-rs0" firstAttribute="leading" secondItem="cwm-Cl-O0b" secondAttribute="trailing" constant="10" id="BpJ-Ae-Kva"/>
+                                        <constraint firstItem="3ZZ-6T-s53" firstAttribute="centerY" secondItem="tgY-Mq-PfU" secondAttribute="centerY" id="68d-07-J2T"/>
+                                        <constraint firstItem="3ZZ-6T-s53" firstAttribute="leading" secondItem="tgY-Mq-PfU" secondAttribute="leading" constant="6" id="9Hb-HW-173"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d2S-Bm-rs0" secondAttribute="trailing" constant="20" symbolic="YES" id="Jzm-sJ-fZx"/>
                                         <constraint firstItem="d2S-Bm-rs0" firstAttribute="top" secondItem="tgY-Mq-PfU" secondAttribute="topMargin" constant="22" id="Lq3-Gl-NG4"/>
-                                        <constraint firstItem="cwm-Cl-O0b" firstAttribute="leading" secondItem="tgY-Mq-PfU" secondAttribute="leadingMargin" constant="-10" id="UfS-5x-KXh"/>
                                         <constraint firstItem="d2S-Bm-rs0" firstAttribute="leading" secondItem="tgY-Mq-PfU" secondAttribute="leading" constant="100" id="YT2-0d-Wy6"/>
-                                        <constraint firstItem="cwm-Cl-O0b" firstAttribute="centerY" secondItem="tgY-Mq-PfU" secondAttribute="centerY" id="Ynn-D9-VIf"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="avatarImage" destination="cwm-Cl-O0b" id="s03-kY-bsb"/>
+                                    <outlet property="avatarImage" destination="3ZZ-6T-s53" id="YDL-qk-im3"/>
                                     <outlet property="friendsLabel" destination="d2S-Bm-rs0" id="4Bf-5O-wJT"/>
                                     <segue destination="POl-z2-kW6" kind="show" identifier="usersPhotos" id="Syn-W6-zUA"/>
                                 </connections>
@@ -212,12 +228,24 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-BP-bT7">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-BP-bT7">
                                             <rect key="frame" x="4" y="4" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" red="0.2098816335" green="0.32468634839999999" blue="0.41983065009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mz-Cw-H43" customClass="LikeControl" customModule="VK_app" customModuleProvider="target">
+                                            <rect key="frame" x="73" y="108" width="55" height="20"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="BhQ-TZ-Gmv"/>
+                                                <constraint firstAttribute="width" constant="55" id="zJl-h6-zo8"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="0Mz-Cw-H43" secondAttribute="trailing" id="Y7i-Vo-fXK"/>
+                                        <constraint firstAttribute="bottom" secondItem="0Mz-Cw-H43" secondAttribute="bottom" id="ume-oV-jHF"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="0.90081953999999997" green="0.89749175309999996" blue="0.94205945729999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -234,7 +262,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UA2-VN-KRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-194"/>
+            <point key="canvasLocation" x="1928.8" y="-194.33497536945814"/>
         </scene>
         <!--My groups-->
         <scene sceneID="VnD-m6-C00">
@@ -397,7 +425,7 @@
     <resources>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>

@@ -18,4 +18,13 @@ class Group: NSObject {
         self.groupAvatar = UIImage(named: "earth-icon")
         self.groupDescription = nil
     }
+    
+    static let groups: [Group] = [
+        Group(name: "GeekBrains"),
+        Group(name: "TJ"),
+        Group(name: "VseMaiki"),
+        Group(name: "Anime"),
+        Group(name: "Физкек"),
+        Group(name: "Stand Up")
+    ]
 }

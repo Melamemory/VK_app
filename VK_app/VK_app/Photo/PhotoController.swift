@@ -12,7 +12,7 @@ private let reuseIdentifier = "Cell"
 
 class PhotoController: UICollectionViewController {
     
-//    var photos = [UIImage?] ()
+    var friendPhotos: [UIImage] = []
 //
 //    @IBAction func showPhotos (segue: UIStoryboardSegue) {
 //        if segue.identifier == "usersPhotos" {
@@ -50,13 +50,13 @@ class PhotoController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 5 //photos.count
+        return friendPhotos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         
-//        cell.photoImage.image = photos[indexPath.row]
+        cell.photoImage.image = friendPhotos[indexPath.row]
     
         // Configure the cell
     
