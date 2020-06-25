@@ -10,23 +10,7 @@ import UIKit
 
 class AllGroupsController: UITableViewController {
     
-    let groups = [
-        Group(name: "GeekBrains"),
-        Group(name: "TJ"),
-        Group(name: "VseMaiki"),
-        Group(name: "Anime"),
-        Group(name: "Физкек"),
-        Group(name: "Stand Up")
-    ]
-    
-//    let groups = [
-//        "GeekBrains",
-//        "TJ",
-//        "VseMaiki",
-//        "Anime",
-//        "Физкек",
-//        "Stand Up"
-//    ]
+    let groups = Group.groups
 
     override func viewDidLoad() {
         super.viewDidLoad()
